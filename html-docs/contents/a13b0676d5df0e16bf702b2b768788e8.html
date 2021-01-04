@@ -135,6 +135,60 @@
       <!-- Operations -->
 
       
+      <section>
+        <h3>Operations</h3>
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Visibility</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="5818343043ce4ea006ab4c09c82bf123.html">insertMsgRecord(usertoSend: ArrayList&lt;User&gt;, msg: Message)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="0df5c5a3f1269d87d9e7e0c6a156c031.html">deleteMsgRecord(usertoDelete: ArrayList&lt;User&gt;, msg: Message)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="c93727ad24fce793fe2157a6482ddfb1.html">editMsg(content: String, msgId: Long)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="e42bf73b11f41544bfe6091a7afb6ecb.html">getMsgList(msgList: ArrayList&lt;Message&gt;)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="cd3c63e6167bf5affc0fd7bef8f31f39.html">getAMsg(msgId: Long): Message</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="263a550c88e1ede13688de717720a104.html">getAllMsg(): ArrayList&lt;Message&gt;</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="1c71b287e986732e050107bc72ab63ad.html">getMsgRecByReceiveId(receiveId: Long): ArrayList&lt;MessageReceive&gt;</a></td>
+            <td></td>
+          </tr>
+          
+        </table>
+      </section>
+      
 
       <!-- Receptions -->
 
@@ -324,6 +378,15 @@
 
         
         
+<section class="element-list">
+    <h3>Dependencies</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='fa4e06aff5ecbed862639a6e1126f7ba.html'><span class='node-icon staruml-icon icon-UMLClass'></span>MessageReceive</a></li>
+        
+    </ul>
+</section>
+
 
 
         
@@ -339,7 +402,11 @@
     <h3>Relationships</h3>
     <ul class="nav nav-list">
         
-        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgServlet—DatabaseServer)</a></li>
+        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgEditServlet—DatabaseServer)</a></li>
+        
+        <li><a href='1b3acec7a83bb065818dfd46e3ce6851.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(DatabaseServer→MessageReceive)</a></li>
+        
+        <li><a href='8e41ee4f2051aaabfd03478d8abce774.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(UserMsgServlet—DatabaseServer)</a></li>
         
     </ul>
 </section>
@@ -350,6 +417,15 @@
 
       
       
+<section class="element-list">
+    <h3>Owned Elements</h3>
+    <ul class="nav nav-list">
+        
+        <li><a href='1b3acec7a83bb065818dfd46e3ce6851.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(DatabaseServer→MessageReceive)</a></li>
+        
+    </ul>
+</section>
+
 
 
     </div>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>SysMsgServlet</title>
+    <title>SysMsgEditServlet</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -18,7 +18,7 @@
 
       <!-- Name Title -->
 
-      <h1>SysMsgServlet</h1>
+      <h1>SysMsgEditServlet</h1>
 
       <!-- Type and Stereotype -->
 
@@ -43,7 +43,7 @@
           <span class="label label-info"><a href='2c413355b55cdd0e12fe395c990afd93.html'><span class='node-icon staruml-icon icon-UMLModel'></span>Part_sysMsg</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='e31f76dac5661cc25d3abf992cce379e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>SysMsgServlet</a></span>
+          <span class="label label-info"><a href='e31f76dac5661cc25d3abf992cce379e.html'><span class='node-icon staruml-icon icon-UMLClass'></span>SysMsgEditServlet</a></span>
         
       </section>
 
@@ -187,7 +187,37 @@
           
           <tr>
             <td>public</td>
-            <td><a href="8f4f62f4157d193dcdb44c8b97917ef5.html">releaseMsg(msg: Message, granularity: Granularity, userIdtoSend: ArrayList&lt;User&gt;)</a></td>
+            <td><a href="8f4f62f4157d193dcdb44c8b97917ef5.html">releaseMsg(msg: Message, granularity: Granularity, usertoSend: ArrayList&lt;User&gt;, area: Area, character: Character)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="a8b820ce13e8248db243855b4a6b13b6.html">deleteMsg(msg: Message, granularity: Granularity, usertoDelete: ArrayList&lt;User&gt;, area: Area, character: Character)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="93b4da249c411508e0b28a062aa9c39f.html">editMsg(msgId: Long, newContent: String)</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="f329d7ffd74584fded17e42d1bb8a0cb.html">getAllMsg(): ArrayList&lt;Message&gt;</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="4c85983e5b72d6536b13967f5964b287.html">getAMsg(msgId: Long): Message</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="5c26300c0e23361967ff7affb8a18c25.html">getAllMsgPreview(): HashMap&lt;Long,String&gt;</a></td>
             <td></td>
           </tr>
           
@@ -291,7 +321,7 @@
     
     <tr>
         <td>name</td>
-        <td>SysMsgServlet</td>
+        <td>SysMsgEditServlet</td>
     </tr>
     
     
@@ -393,6 +423,10 @@
         
         <li><a href='fe3eb8c32c4e321f3f0a51617988810d.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Message</a></li>
         
+        <li><a href='8bc5fb16196f42b8d985a928ab628460.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Area</a></li>
+        
+        <li><a href='8ad69e9eae932adeb542d55026fbc02a.html'><span class='node-icon staruml-icon icon-UMLEnumeration'></span>Character</a></li>
+        
     </ul>
 </section>
 
@@ -411,15 +445,19 @@
     <h3>Relationships</h3>
     <ul class="nav nav-list">
         
-        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgServlet—DatabaseServer)</a></li>
+        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgEditServlet—DatabaseServer)</a></li>
         
-        <li><a href='56651375e3f6d0cb36a44152a717a71c.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(SysMsgServlet→HttpServlet)</a></li>
+        <li><a href='56651375e3f6d0cb36a44152a717a71c.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(SysMsgEditServlet→HttpServlet)</a></li>
         
-        <li><a href='f9ec9bbbee981a913a8e70835aa9796f.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→Granularity)</a></li>
+        <li><a href='f9ec9bbbee981a913a8e70835aa9796f.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Granularity)</a></li>
         
-        <li><a href='a262b0a4c17f66069d141909145023e6.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→User)</a></li>
+        <li><a href='a262b0a4c17f66069d141909145023e6.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→User)</a></li>
         
-        <li><a href='369874267c16c1757976afeb1c39ce3e.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→Message)</a></li>
+        <li><a href='369874267c16c1757976afeb1c39ce3e.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Message)</a></li>
+        
+        <li><a href='3332d60cea65860912874ea00958dcf0.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Area)</a></li>
+        
+        <li><a href='fd2fc7520e10b69bd4b99155e0f28ac5.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Character)</a></li>
         
     </ul>
 </section>
@@ -434,15 +472,19 @@
     <h3>Owned Elements</h3>
     <ul class="nav nav-list">
         
-        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgServlet—DatabaseServer)</a></li>
+        <li><a href='c8710f7e58368e56bf51043c3a1f6084.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(SysMsgEditServlet—DatabaseServer)</a></li>
         
-        <li><a href='56651375e3f6d0cb36a44152a717a71c.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(SysMsgServlet→HttpServlet)</a></li>
+        <li><a href='56651375e3f6d0cb36a44152a717a71c.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(SysMsgEditServlet→HttpServlet)</a></li>
         
-        <li><a href='f9ec9bbbee981a913a8e70835aa9796f.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→Granularity)</a></li>
+        <li><a href='f9ec9bbbee981a913a8e70835aa9796f.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Granularity)</a></li>
         
-        <li><a href='a262b0a4c17f66069d141909145023e6.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→User)</a></li>
+        <li><a href='a262b0a4c17f66069d141909145023e6.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→User)</a></li>
         
-        <li><a href='369874267c16c1757976afeb1c39ce3e.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgServlet→Message)</a></li>
+        <li><a href='369874267c16c1757976afeb1c39ce3e.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Message)</a></li>
+        
+        <li><a href='3332d60cea65860912874ea00958dcf0.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Area)</a></li>
+        
+        <li><a href='fd2fc7520e10b69bd4b99155e0f28ac5.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(SysMsgEditServlet→Character)</a></li>
         
     </ul>
 </section>
